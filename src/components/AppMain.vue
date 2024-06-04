@@ -12,7 +12,7 @@
 
     <div class="row ms-5 m-0">
       <div class="col-12 m-0">
-        <h1>Learn more about our <h1 style="color: #00D9A6;">missions</h1>
+        <h1 style="font-size: 3rem;">Learn more about our <h1 style="color: #00D9A6; font-size: 3rem;">missions</h1>
         </h1>
 
         <div class="d-flex flex-row">
@@ -32,12 +32,68 @@
 
       </div>
     </div>
-
-
-
-
-
   </div>
+
+
+
+  <div class="container m-0 mt-5 d-flex flex-row"">
+    <div class=" row">
+
+    <div class="col-7" style="margin-top: 20rem;">
+
+      <div class="d-flex flex-row mt-5">
+        <hr class="hr1">
+        <hr class="hr2 ms-3">
+      </div>
+      <h1 style="font-size: 3.5rem;">Our recent <g1 style="color: #00D9A6;">web designs</g1> &
+        some examples of
+        past <h1 style="color: #00D9A6; font-size: 3.5rem;">projects</h1>
+      </h1>
+
+      <div class="d-flex flex-row">
+        <hr class="hr1">
+        <hr class="hr2 ms-3">
+      </div>
+    </div>
+
+    <div class="col-5" style="margin-top: 30rem;">
+      <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind
+        texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language
+        ocean.Separated they live in Bookmarksgrove.Far far away, behind the word mountains, far from the countries
+        Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove.</p>
+    </div>
+  </div>
+  </div>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-3">
+        <img src="../assets/images/ina-soulis-227104-unsplash-1024x1024.jpg" alt="">
+      </div>
+      <div class="col-3">
+        <img src="../assets/images/sunisa-misa-531163-unsplash-1024x1024.jpg" alt="">
+      </div>
+      <div class="col-3">
+        <img src="../assets/images/355H-1024x1024.jpg" alt="">
+      </div>
+      <div class="col-3">
+        <img src="../assets/images/photo-1448932252197-d19750584e56-1024x1024.jpg" alt="">
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
 </template>
 
 <style>
