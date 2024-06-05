@@ -1,12 +1,58 @@
-<script></script>
+<script>
+
+
+export default {
+  data() {
+    return {
+      numero: 0,
+      numMax: 280,
+      number: 0,
+      numbMax: 3600,
+      percent: 0,
+      maxPercent: 100,
+
+
+    }
+  },
+  methods: {
+    startAnimations() {
+
+      const interval1 = setInterval(() => {
+        if (this.numero !== this.numMax) {
+          this.numero++;
+        } else {
+          clearInterval(interval1);
+        }
+      }, 50);
+
+      const interval2 = setInterval(() => {
+        if (this.number !== this.numbMax) {
+          this.number++;
+        } else {
+          clearInterval(interval2);
+        }
+      }, 1);
+
+      const interval3 = setInterval(() => {
+        if (this.percent !== this.maxPercent) {
+          this.percent++;
+        } else {
+          clearInterval(interval3);
+        }
+      }, 120);
+    }
+  }
+}
+
+</script>
 
 <template>
   <div class="container m-0 d-flex flex-row justify-content-between">
     <div class="row">
       <div class="col-6">
-        <div class="imgPerson1 "></div>
-        <div class="cardGreen"></div>
-        <div class="imgPerson2"></div>
+        <div class="imgPerson1 shadow"></div>
+        <div class="cardGreen shadow"></div>
+        <div class="imgPerson2 shadow"></div>
       </div>
     </div>
 
@@ -66,35 +112,48 @@
   </div>
 
   <div class="container mt-4">
+
     <div class="row d-flex justify-content-center">
       <div class="col-3">
+        <div class="green"></div>
         <img src="../assets/images/ina-soulis-227104-unsplash-1024x1024.jpg" alt="" class="cardImg">
       </div>
+
+
       <div class="col-3">
+        <div class="green"></div>
         <img src="../assets/images/sunisa-misa-531163-unsplash-1024x1024.jpg" alt="" class="cardImg">
       </div>
       <div class="col-3">
+        <div class="green"></div>
         <img src="../assets/images/355H-1024x1024.jpg" alt="" class="cardImg">
       </div>
       <div class="col-3">
+        <div class="green"></div>
         <img src="../assets/images/photo-1448932252197-d19750584e56-1024x1024.jpg" alt="" class="cardImg">
       </div>
     </div>
-  </div>
 
-  <div class="container">
-    <div class="row mt-2 d-flex justify-content-center">
-      <div class="col-3">
-        <img src="../assets/images/business-competition-PB366D8-1024x1024.jpg" alt="" class="cardImg">
-      </div>
-      <div class="col-3">
-        <img src="../assets/images/cozy-sofa-in-living-room-PQR5AB9-1024x1024.jpg" alt="" class="cardImg">
-      </div>
-      <div class="col-3">
-        <img src="../assets/images/aa9a4539-PQGJ7HU-1024x1024.jpg" alt="" class="cardImg">
-      </div>
-      <div class="col-3">
-        <img src="../assets/images/cody-davis-253928-unsplash-1024x1024.jpg" alt="" class="cardImg">
+
+    <div class="container">
+      <div class="green"></div>
+      <div class="row mt-2 d-flex justify-content-center">
+        <div class="col-3">
+          <div class="green"></div>
+          <img src="../assets/images/business-competition-PB366D8-1024x1024.jpg" alt="" class="cardImg">
+        </div>
+        <div class="col-3">
+          <div class="green"></div>
+          <img src="../assets/images/cozy-sofa-in-living-room-PQR5AB9-1024x1024.jpg" alt="" class="cardImg">
+        </div>
+        <div class="col-3">
+          <div class="green"></div>
+          <img src="../assets/images/aa9a4539-PQGJ7HU-1024x1024.jpg" alt="" class="cardImg">
+        </div>
+        <div class="col-3">
+          <div class="green"></div>
+          <img src="../assets/images/cody-davis-253928-unsplash-1024x1024.jpg" alt="" class="cardImg">
+        </div>
       </div>
     </div>
   </div>
@@ -105,18 +164,36 @@
 
 
 
-  <div class="container-fluis m-0 mt-5" style="background-color: #E5E3DF;">
-    <div class="row">
+  <div class="container-fluis m-0 mt-5">
+    <div class="row" @click="startAnimations">
       <div class="col-6">
-        <div class="cardGreen2 ms-5"></div>
-        <div class="imgPerson3 ms-5">
-          <div class="number-container">
-            <span class="number">0</span>
+
+        <div class="cardGreen2 ms-5 shadow">
+
+          <div class=" d-flex flex-column justify-content-center">
+            <div style="font-size: 8rem; color: white; margin-left: 15rem; margin-top: 5rem;">{{ numero }}</div>
+            <span style="font-size: 2rem; color: white; margin-left: 17rem; margin-top: -2.5rem;">PROJECTS</span>
           </div>
+
+          <div class="d-flex justify-content-between">
+            <div class="d-flex flex-column">
+              <div style="font-size: 3rem; color: white; margin-top: 5rem; margin-left: 5rem;"> +{{ number }}</div>
+              <span style="font-size: 1rem; color: white; margin-left: 5rem;">USERS' COMMENTS</span>
+            </div>
+
+            <div class="d-flex flex-column">
+              <div style="font-size: 3rem; color: white; margin-top: 5rem;">{{ percent }}%</div>
+              <span style="font-size: 1rem; color: white; margin-right: 15rem;">HAPPY CLIENTS</span>
+            </div>
+          </div>
+
+
         </div>
+        <div class="imgPerson3 ms-5 shadow"></div>
+
 
         <div class="col-6">
-          <div class="containerWhite">
+          <div class="containerWhite shadow">
             <h1 class="ms-5" style="font-size: 3rem;">We <span style="color: #00D9A6;">Love</span> What</h1>
             <h1 class="ms-5" style="font-size: 3rem;">We Do</h1>
 
@@ -146,10 +223,10 @@
     </div>
   </div>
 
-  <div class="container mt-5 m-0">
-    <div class="row">
+  <div class="container-fluid mt-5">
+    <div class="row" style="margin-top: 20rem;">
 
-      <div class="col-6">
+      <div class="col-5">
         <h1 style="font-size: 4.5rem;">With <span style="color: #00D9A6;">Live Chat</span>
           <span style="color: #00D9A6;"> 24/7</span> Support
         </h1>
@@ -166,7 +243,9 @@
         </div>
       </div>
 
-      <div class="col-2 cardBlack p-0">
+
+      <!-- ----CARD BLACK----- -->
+      <div class="col-2 cardBlack p-0 shadow">
 
         <div class="mt-3" style="width: 100%; height: auto; background-color: white;">
           <div class="d-flex flex-column justify-content-center align-items-center">
@@ -174,16 +253,108 @@
             <p>All Designs</p>
           </div>
         </div>
-        <p class="text-white"><span style="font-size: 2.5rem;">$10</span> /Design</p>
 
+        <p class="text-white d-flex justify-content-center align-items-center ">
+          <span style="font-size: 2.5rem;">$10</span> /Design
+        </p>
+
+        <div class="mt-3 rounded-bottom" style="width: 100%; height: 10rem; background-color: white;">
+          <div>
+            <ul style="list-style: none; font-size: 0.9rem;">
+              <li class="mt-2"> <i class="fa-solid fa-check text-success"></i> Creative Design Enabled</li>
+              <li class="mt-2"> <i class="fa-solid fa-check text-success"></i> Vibrant Color Usage</li>
+              <li class="mt-2"> <i class="fa-solid fa-check text-success"></i> Eye Catching Design</li>
+              <li class="mt-2"> <i class="fa-solid fa-check text-success"></i> Extreme Typography</li>
+              <li class="mt-2"> <i class="fa-solid fa-check text-success"></i> Exceptional Design</li>
+            </ul>
+          </div>
+        </div>
       </div>
 
+      <!------- CARD GREEN----- -->
+      <div class="col-2 cardGreen3 p-0 shadow ms-4">
 
+        <div class="mt-3" style="width: 100%; height: auto; background-color: white;">
+          <div class="d-flex flex-column justify-content-center align-items-center">
+            <h2>DEVELOPMENT</h2>
+            <p>WordPress project</p>
+          </div>
+        </div>
 
+        <p class="text-white d-flex justify-content-center align-items-center ">
+          <span style="font-size: 2.5rem;">$15</span> /Design
+        </p>
 
+        <div class="mt-3 rounded-bottom" style="width: 100%; height: 10rem; background-color: white;">
+          <div>
+            <ul style="list-style: none; font-size: 0.9rem;">
+              <li class="mt-2"> <i class="fa-solid fa-check text-success"></i> Creative Design Enabled</li>
+              <li class="mt-2"> <i class="fa-solid fa-check text-success"></i> Vibrant Color Usage</li>
+              <li class="mt-2"> <i class="fa-solid fa-check text-success"></i> Eye Catching Design</li>
+              <li class="mt-2"> <i class="fa-solid fa-check text-success"></i> Extreme Typography</li>
+              <li class="mt-2"> <i class="fa-solid fa-check text-success"></i> Exceptional Design</li>
+            </ul>
+          </div>
+        </div>
+      </div>
 
+      <!------- CARD BLACK----- -->
+      <div class="col-2 cardBlack p-0 shadow ms-4">
 
+        <div class="mt-3" style="width: 100%; height: auto; background-color: white;">
+          <div class="d-flex flex-column justify-content-center align-items-center">
+            <h2>SEO</h2>
+            <p>Web Products</p>
+          </div>
+        </div>
 
+        <p class="text-white d-flex justify-content-center align-items-center ">
+          <span style="font-size: 2.5rem;">$10</span> /Product
+        </p>
+
+        <div class="mt-3 rounded-bottom" style="width: 100%; height: 10rem; background-color: white;">
+          <div>
+            <ul style="list-style: none; font-size: 0.9rem;">
+              <li class="mt-2"> <i class="fa-solid fa-check text-success"></i> Creative Design Enabled</li>
+              <li class="mt-2"> <i class="fa-solid fa-check text-success"></i> Vibrant Color Usage</li>
+              <li class="mt-2"> <i class="fa-solid fa-check text-success"></i> Eye Catching Design</li>
+              <li class="mt-2"> <i class="fa-solid fa-check text-success"></i> Extreme Typography</li>
+              <li class="mt-2"> <i class="fa-solid fa-check text-success"></i> Exceptional Design</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!--------CONTAINER JUMBO--------->
+
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-12">
+
+        <div class="containerJumbo"></div>
+
+        <div class="backBlack"></div>
+
+        <div class="d-flex flex-column justify-content-center align-items-center" style="margin-top: -40rem;">
+          <i class="fa-solid fa-quote-left" style="font-size: 5rem; color: #00D9A6;"></i>
+          <p class="mt-5" style="color: white; font-size: 2rem; width: 900px;">When it comes to barbequing, there are
+            two main
+            schools of thought
+            for the techniques
+            that you can use.
+            Freshly scrambled eggs with applewood smoked bacon - are amazing!
+          </p>
+
+          <div class="imgClient shadow2 mt-5"></div>
+
+          <h2 class="mt-5" style="color: #00D9A6;">LISSA DURBIN</h2>
+
+          <p class="text-white mt-1" style="font-size: 1.5rem;">Client</p>
+
+        </div>
+      </div>
     </div>
   </div>
 
@@ -204,134 +375,18 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
 </template>
 
-<style>
-.imgPerson1 {
-  background-image: url(../assets/images/businesswoman-analysing-document-P8WSNMC-1024x820.jpg);
-  background-size: cover;
-  width: 600px;
-  height: 500px;
-  border-radius: 25px;
-  margin-left: 8rem;
-  top: 2rem;
-  position: relative;
-  z-index: 6;
-}
-
-.cardGreen {
-  background: linear-gradient(to right, #64CE74, #21D8A6);
-  background-size: cover;
-  width: 600px;
-  height: 500px;
-  border-radius: 25px;
-  margin-top: -32rem;
-  position: absolute;
-}
-
-.imgPerson2 {
-  background-image: url(../assets/images/busy-architect-PYVKWM4-1024x872.jpg);
-  background-size: cover;
-  width: 600px;
-  height: 500px;
-  opacity: 0.1;
-  border-radius: 25px;
-  margin-top: -31.5rem;
-}
-
-.hr1 {
-  border: none;
-  width: 1rem;
-  height: 5px;
-  background: linear-gradient(to right, #64CE74, #21D8A6);
-  opacity: 1;
-  border-radius: 50px;
-}
-
-.hr2 {
-  border: none;
-  width: 3rem;
-  height: 5px;
-  background: linear-gradient(to right, #64CE74, #21D8A6);
-  opacity: 1;
-  border-radius: 50px;
-}
-
-.btn-green {
-  background: linear-gradient(to right, #64CE74, #21D8A6);
-  color: white;
-  font-size: 0.8rem;
-  border-radius: 25px;
-  padding: 10px 20px;
-  border: none;
-}
-
-.btn-green:hover {
-  background: linear-gradient(to right, gray, black);
-
-}
-
-.cardImg {
-  width: 20rem;
-  height: 20rem;
-  border-radius: 5px;
-  transition: transform 0.3s ease;
-}
-
-.cardImg:hover {
-  transform: scale(1.2);
-  opacity: 0.9;
-
-}
-
-.btn-green2 {
-  background: linear-gradient(to right, #64CE74, #21D8A6);
-  color: white;
-  font-size: 0.8rem;
-  border-radius: 25px;
-  padding: 20px 40px;
-  border: none;
-}
-
-.btn-green2:hover {
-  background: linear-gradient(to right, gray, black);
-
-}
-
-.cardGreen2 {
-  background: linear-gradient(to right, #64CE74, #21D8A6);
-  background-size: cover;
-  width: 800px;
-  height: 600px;
-  border-radius: 25px;
-  position: absolute;
-  margin-top: 10rem;
-}
-
-.imgPerson3 {
-  background-image: url(../assets/images/person-with-long-curly-hair-PZ99QM2-2x.jpg);
-  background-size: cover;
-  width: 800px;
-  height: 600px;
-  opacity: 0.1;
-  border-radius: 25px;
-  margin-top: 10rem;
-}
-
-.containerWhite {
-  background-color: white;
-  width: 850px;
-  height: 600px;
-  border-radius: 25px;
-  margin-left: 40rem;
-  margin-top: -33rem;
-  position: relative;
-  z-index: 6;
-}
-
-.cardBlack {
-  background: linear-gradient(to right, gray, black);
-  border-radius: 20px;
-
-}
-</style>
+<style></style>
