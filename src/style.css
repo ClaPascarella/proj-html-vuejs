@@ -68,18 +68,10 @@
 
 }
 
-.cardImg {
-  width: 20rem;
-  height: 20rem;
-  border-radius: 5px;
-  transition: transform 0.3s ease;
-
-}
-
-.col-3:hover {
+/* .col-12:hover {
   transform: scale(1.2);
   
-}
+} */
 
 .green {
   background: linear-gradient(to right, #64CE74, #21D8A6);
@@ -135,7 +127,7 @@
 
 .containerWhite {
   background-color: white;
-  width: 850px;
+  width: 800px;
   height: 600px;
   border-radius: 25px;
   margin-left: 40rem;

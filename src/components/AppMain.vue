@@ -1,9 +1,17 @@
 <script>
+import store from "../data/store.js";
+import cardImg from "./cardImg.vue";
 
 
 export default {
+  components: {
+    cardImg
+  },
   data() {
     return {
+
+
+      store,
       numero: 0,
       numMax: 280,
       number: 0,
@@ -40,7 +48,11 @@ export default {
           clearInterval(interval3);
         }
       }, 120);
-    }
+    },
+    getImg(path) {
+      let risultato = new URL(`../assets/images/${path}`, import.meta.url);
+      return risultato.href;
+    },
   }
 }
 
@@ -91,7 +103,7 @@ export default {
           <hr class="hr1">
           <hr class="hr2 ms-3">
         </div>
-        <h1 style="font-size: 3.5rem;">Our recent <g1 style="color: #00D9A6;">web designs</g1> &
+        <h1 style="font-size: 3.5rem;">Our recent <span style="color: #00D9A6; font-size: 3.5rem;">web designs</span> &
           some examples of
           past <h1 style="color: #00D9A6; font-size: 3.5rem;">projects</h1>
         </h1>
@@ -113,49 +125,17 @@ export default {
 
   <div class="container mt-4">
 
-    <div class="row d-flex justify-content-center">
-      <div class="col-3">
-        <div class="green"></div>
-        <img src="../assets/images/ina-soulis-227104-unsplash-1024x1024.jpg" alt="" class="cardImg">
-      </div>
+    <div class="row">
+      <div class="col-12">
 
-
-      <div class="col-3">
-        <div class="green"></div>
-        <img src="../assets/images/sunisa-misa-531163-unsplash-1024x1024.jpg" alt="" class="cardImg">
-      </div>
-      <div class="col-3">
-        <div class="green"></div>
-        <img src="../assets/images/355H-1024x1024.jpg" alt="" class="cardImg">
-      </div>
-      <div class="col-3">
-        <div class="green"></div>
-        <img src="../assets/images/photo-1448932252197-d19750584e56-1024x1024.jpg" alt="" class="cardImg">
+        <cardImg v-for="img in store.immagini" :immagini="img" />
+        <div></div>
       </div>
     </div>
 
 
-    <div class="container">
-      <div class="green"></div>
-      <div class="row mt-2 d-flex justify-content-center">
-        <div class="col-3">
-          <div class="green"></div>
-          <img src="../assets/images/business-competition-PB366D8-1024x1024.jpg" alt="" class="cardImg">
-        </div>
-        <div class="col-3">
-          <div class="green"></div>
-          <img src="../assets/images/cozy-sofa-in-living-room-PQR5AB9-1024x1024.jpg" alt="" class="cardImg">
-        </div>
-        <div class="col-3">
-          <div class="green"></div>
-          <img src="../assets/images/aa9a4539-PQGJ7HU-1024x1024.jpg" alt="" class="cardImg">
-        </div>
-        <div class="col-3">
-          <div class="green"></div>
-          <img src="../assets/images/cody-davis-253928-unsplash-1024x1024.jpg" alt="" class="cardImg">
-        </div>
-      </div>
-    </div>
+
+
   </div>
 
   <div class="mt-5 d-flex justify-content-center">
