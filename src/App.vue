@@ -1,16 +1,46 @@
 <script>
-import AppMain from './components/AppMain.vue';
-
-
+import PageHeader from './components/PageHeader.vue';
+import AppJumbo from './components/AppJumbo.vue';
+import AppServices from './components/AppServices.vue'
+import PageMain from './components/PageMain.vue';
+import PageFooter from './components/PageFooter.vue';
+import store from './data/store.js';
 export default {
+  name: "App",
   components: {
-    AppMain
-  }
+    PageHeader,
+    PageMain,
+    PageFooter,
+    AppJumbo,
+    AppServices,
+    store
+
+  },
+
+  data() {
+    return {
+      store
+
+    }
+
+  },
+
+  methods: {
+
+
+  },
+
 }
 </script>
 
 <template>
-  <AppMain />
+  <PageHeader />
+  <AppJumbo />
+  <AppServices />
+  <PageMain />
+  <PageFooter />
 </template>
 
-<style></style>
+
+
+<style scoped></style>

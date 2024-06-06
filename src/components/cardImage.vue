@@ -1,38 +1,52 @@
+<!-- JS -->
 <script>
 import store from "../data/store.js";
+
 export default {
-    name: "cardImg",
+
+    name: "cardImage",
+
     props: {
-        immagini: Object
+        img: Object
     },
+
+
     data() {
         return {
             store
         }
     },
+
     methods: {
         getImg(path) {
             let risultato = new URL(`../assets/images/${path}`, import.meta.url);
             return risultato.href;
         },
     },
+
+
+
+
 }
 </script>
+
 <!-- HTML -->
 <template>
-    <img :src="getImg(immagini.immagine)" alt="" class="cardImg">
-</template>
-<!-- CSS -->
-<style>
-.cardImg {
-    width: 18rem;
-    height: 18rem;
-    border-radius: 5px;
-    transition: transform 0.3s ease;
-    margin: 5px;
-}
 
-.cardImg:hover {
-    transform: scale(1.2);
+    <div class="img">
+        <img :src="getImg(img.image)" alt="">
+
+
+
+
+
+    </div>
+</template>
+
+<!-- CSS -->
+<style scoped>
+.img {
+    height: 7rem;
+
 }
 </style>
