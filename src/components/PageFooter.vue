@@ -55,23 +55,23 @@ export default {
 
 
 
+
         <!-- due carte -->
         <div class="col-12 centro padding-top ">
             <div class="card-center nero">
-                <p class="titolo1 text-center text-white">Are You Ready?</p>
-                <h3 class="titolo2 text-center text-white">Start a New Project</h3>
-                <div class="input-group radius">
+                <p class="margin-t text-center text-white">{{ store.dueCarte[0].titolo }}</p>
+                <h2 class="margin-b text-center text-white">{{ store.dueCarte[0].titolone }}</h2>
+                <div class="input-group radius mt-5">
                     <input class="input-text" type="text" placeholder="Enter Your Email Address">
                     <button class="input-btn">SUBMIT</button>
                 </div>
             </div>
             <div class="card-center verde">
-                <p class="titolo1 text-center text-white">What Are You Waiting for?</p>
-                <h3 class="titolo2 text-center text-white">Let's Talk About Work</h3>
+                <p class="margin-t text-center text-white">{{ store.dueCarte[1].titolo }}</p>
+                <h2 class="margin-b text-center text-white">{{ store.dueCarte[1].titolone }}</h2>
                 <button type="button" class="btn nero btn-lg text-white mt-5">START NOW</button>
             </div>
         </div>
-
 
 
         <!-- immagini pubblicità -->

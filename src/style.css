@@ -4,6 +4,11 @@
   margin: 0;
 }
 
+h2,
+h1 {
+  font-family: Arial Rounded MT Bold;
+}
+
 .imgPerson1 {
   background-image: url(./assets/images/businesswoman-analysing-document-P8WSNMC-1024x820.jpg);
   background-size: cover;
@@ -67,29 +72,6 @@
   background: linear-gradient(to right, gray, black);
 
 }
-
-/* .col-12:hover {
-  transform: scale(1.2);
-  
-} */
-
-.green {
-  background: linear-gradient(to right, #64CE74, #21D8A6);
-  opacity: 0;
-  width: 20rem;
-  height: 20rem;
-  position: absolute;
-  border-radius: 5px;
-  
-}
-
-.green:hover {
-  background: linear-gradient(to right, #64CE74, #21D8A6);
-  opacity: 0.8;
-}
-  
-
-
 
 .btn-green2 {
   background: linear-gradient(to right, #64CE74, #21D8A6);

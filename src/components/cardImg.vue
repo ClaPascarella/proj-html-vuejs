@@ -30,9 +30,11 @@ export default {
     border-radius: 5px;
     transition: transform 0.3s ease;
     margin: 5px;
+    background: linear-gradient(to right, #64CE74, #21D8A6);
 }
 
 .cardImg:hover {
     transform: scale(1.2);
+
 }
 </style>

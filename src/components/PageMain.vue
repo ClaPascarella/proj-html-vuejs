@@ -24,6 +24,7 @@ export default {
     }
   },
   methods: {
+
     startAnimations() {
 
       const interval1 = setInterval(() => {
@@ -54,13 +55,14 @@ export default {
       let risultato = new URL(`../assets/images/${path}`, import.meta.url);
       return risultato.href;
     },
+
   }
 }
 
 </script>
 
 <template>
-  <div class="container m-0 d-flex flex-row justify-content-between">
+  <div class="container m-0 d-flex flex-row justify-content-between mt-5">
     <div class="row">
       <div class="col-6">
         <div class="imgPerson1 shadow"></div>
@@ -129,6 +131,7 @@ export default {
     <div class="row">
       <div class="col-12">
 
+
         <cardImg v-for="img in store.immagini" :immagini="img" />
 
       </div>
@@ -145,7 +148,7 @@ export default {
 
 
 
-  <div class="container-fluis m-0 mt-5">
+  <div class="container-fluid m-0 mt-5">
     <div class="row" @click="startAnimations">
       <div class="col-6">
 

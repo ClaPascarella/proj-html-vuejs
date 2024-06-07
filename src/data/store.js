@@ -120,6 +120,18 @@ immagini: [
     immagine: "cody-davis-253928-unsplash-1024x1024.jpg"
    },
    
+],
+
+dueCarte:[
+    {
+        titolo:"Are You Ready?",
+        titolone:"Start a New Project"
+    },
+    {
+        titolo:"What Are You Waiting for?",
+        titolone:"Let's Talk About Work"
+    }
+    
 ]
 
 };
